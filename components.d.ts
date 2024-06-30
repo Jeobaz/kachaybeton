@@ -11,9 +11,7 @@ declare module 'vue' {
     Gallery: typeof import('./src/components/gallery.vue')['default']
     Gallery_card: typeof import('./src/components/gallery_card.vue')['default']
     Header: typeof import('./src/components/header.vue')['default']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Hero_section: typeof import('./src/components/hero_section.vue')['default']
-    HeroSection: typeof import('./src/components/HeroSection.vue')['default']
     Table_card: typeof import('./src/components/table_card.vue')['default']
   }
 }
