@@ -25,6 +25,7 @@
     </v-container>   
 
     <Gallery />
+    <Partners />
    
     
   </v-main>
@@ -36,6 +37,7 @@ import EquipmentCard from "./components/cards.vue";
 import HeroSection from "./components/hero_section.vue";
 import Gallery from "./components/gallery.vue";
 import TableCard from "./components/table_card.vue";
+import Partners from "./components/partners.vue";
 
 
 export default {
@@ -45,6 +47,7 @@ export default {
     HeroSection,
     Gallery,
     TableCard,
+    Partners
   
   },
   methods:{

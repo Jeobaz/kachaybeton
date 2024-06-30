@@ -1,7 +1,7 @@
 <template>
     <v-app-bar app>
       <v-row class="d-none d-md-flex">
-      <span class="text-h6 ml-12 ">КачайБетон</span>
+      <span class="text-h6 black--text ml-12">КачайБетон</span>
        <v-img src="/src/assets/hero/logo0.png" alt="Логотип" contain max-height="40" max-width='200'></v-img>
      </v-row>
     

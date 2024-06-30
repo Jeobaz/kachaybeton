@@ -12,6 +12,9 @@ declare module 'vue' {
     Gallery_card: typeof import('./src/components/gallery_card.vue')['default']
     Header: typeof import('./src/components/header.vue')['default']
     Hero_section: typeof import('./src/components/hero_section.vue')['default']
+    Partners: typeof import('./src/components/partners.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
     Table_card: typeof import('./src/components/table_card.vue')['default']
   }
 }
