@@ -36,13 +36,9 @@ export default {
       },
       call() {
         window.open("tel:+79999999999");
-        // window.location.href = 'tel:+79999999999';
-        // this.dialog = false;
       },
       email() {
         window.open("mailto:test@test.ru");
-        // window.location.href = 'mailto:test@test.ru';
-        // this.dialog = false;
       },
     },
   },

@@ -45,7 +45,7 @@ export default {
           description2: "Доступные объемы от 9 до 16м³",
           caption: "Минимальный объем 7 м³",
 
-          path: "src/assets/cards/mixer.png",
+          path: "/cards/mixer.png",
         },
         {
           id: 2,
@@ -55,7 +55,7 @@ export default {
           description1: "Высота подачи 47 и 57м",
           description2: "Размер площадки 7 х 9м",
           caption: "Минимальный объем 50 м³ / 15 000₽",
-          path: "src/assets/cards/pump.png",
+          path: "/cards/pump.png",
         },
         {
           id: 3,
@@ -65,7 +65,7 @@ export default {
           description1: "Высота подачи до 25м",
           description2: "Размер площадки 4 х 5м",
           caption: "Минимальный объем 40 м³ / 12 000₽",
-          path: "src/assets/cards/mixer.png",
+          path: "/cards/mixer.png",
         },
         {
           id: 4,
@@ -74,7 +74,7 @@ export default {
           priceFrom: false,
           description1: "Высота подачи 47 и 57м",
           description2: "Размер площадки 7 х 9м",
-          path: "src/assets/cards/pump_with_mixer.png",
+          path: "/cards/pump_with_mixer.png",
         },
         {
           id: 5,
@@ -83,7 +83,7 @@ export default {
           priceFrom: true,
           description1: "Высота подачи 47 и 57м",
           description2: "Размер площадки 7 х 9м",
-          path: "src/assets/cards/pump_static.png",
+          path: "/cards/pump_static.png",
         },
       ],
     };

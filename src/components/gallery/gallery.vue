@@ -24,27 +24,27 @@ export default {
       images: [
         {
           id: 1,
-          src: "src/assets/gallery/slide1.webp",
+          src: "/gallery/slide1.webp",
         },
         {
           id: 2,
-          src: "src/assets/gallery/slide2.webp",
+          src: "/gallery/slide2.webp",
         },
         {
           id: 3,
-          src: "src/assets/gallery/slide3.webp",
+          src: "/gallery/slide3.webp",
         },
         {
           id: 4,
-          src: "src/assets/gallery/slide4.webp",
+          src: "/gallery/slide4.webp",
         },
         {
           id: 5,
-          src: "src/assets/gallery/slide5.webp",
+          src: "/gallery/slide5.webp",
         },
         {
           id: 6,
-          src: "src/assets/gallery/slide6.webp",
+          src: "/gallery/slide6.webp",
         },
       ],
     };

@@ -8,7 +8,7 @@
     </template>
     <v-row class="align-center">
       <v-img
-        src="/src/assets/hero/logo0.png"
+        src="/hero/logo0.png"
         alt="Логотип"
         contain
         max-height="40"

@@ -24,12 +24,12 @@ export default {
   data() {
     return {
       partners: [
-        { name: "СБК", src: "src/assets/logos/sbk.png" },
-        { name: "Звезда", src: "src/assets/logos/zvezda.png" },
-        { name: "Евробетон", src: "src/assets/logos/evrobeton.png" },
-        { name: "БСС", src: "src/assets/logos/bss.png" },
-        { name: "Темпстрой", src: "src/assets/logos/tempstroy.png" },
-        { name: "Строй Капитал", src: "src/assets/logos/sk.png" },
+        { name: "СБК", src: "/logos/sbk.png" },
+        { name: "Звезда", src: "/logos/zvezda.png" },
+        { name: "Евробетон", src: "/logos/evrobeton.png" },
+        { name: "БСС", src: "/logos/bss.png" },
+        { name: "Темпстрой", src: "/logos/tempstroy.png" },
+        { name: "Строй Капитал", src: "/logos/sk.png" },
       ],
     };
   },

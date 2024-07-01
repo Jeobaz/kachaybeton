@@ -33,7 +33,7 @@
       </v-col>
 
       <v-col cols="12" md="6" class="d-none d-md-flex">
-        <v-img src="/src/assets/hero/hero.png" alt="Автобетононасос"></v-img>
+        <v-img src="/hero/hero.png" alt="Автобетононасос"></v-img>
       </v-col>
     </v-row>
     <v-dialog v-model="dialog" max-width="500px">
@@ -92,7 +92,7 @@ export default {
 
 <style scoped>
 .bg {
-  background: url("src/assets/hero/bg.png");
+  background: url("/hero/bg.png");
   background-size: cover;
 }
 </style>
