@@ -7,14 +7,16 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Cards: typeof import('./src/components/cards.vue')['default']
-    Gallery: typeof import('./src/components/gallery.vue')['default']
-    Gallery_card: typeof import('./src/components/gallery_card.vue')['default']
-    Header: typeof import('./src/components/header.vue')['default']
-    Hero_section: typeof import('./src/components/hero_section.vue')['default']
+    Contacts: typeof import('./src/components/contacts.vue')['default']
+    Equipment_cards: typeof import('./src/components/equipment/equipment_cards.vue')['default']
+    Gallery: typeof import('./src/components/gallery/gallery.vue')['default']
+    Gallery_card: typeof import('./src/components/gallery/gallery_card.vue')['default']
+    Header: typeof import('./src/components/header/header.vue')['default']
+    Hero_section: typeof import('./src/components/header/hero_section.vue')['default']
     Partners: typeof import('./src/components/partners.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Table_card: typeof import('./src/components/table_card.vue')['default']
+    Services_gallery: typeof import('./src/components/equipment/services_gallery.vue')['default']
+    Table_card: typeof import('./src/components/equipment/table_card.vue')['default']
   }
 }
