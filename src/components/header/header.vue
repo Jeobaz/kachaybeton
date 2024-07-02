@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app>
+  <v-app-bar app scroll-behavior="hide inverted">
     <template v-if="$vuetify.display.smAndDown">
       <v-app-bar-nav-icon
         variant="text"

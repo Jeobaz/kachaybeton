@@ -13,6 +13,8 @@ declare module 'vue' {
     Gallery_card: typeof import('./src/components/gallery/gallery_card.vue')['default']
     Header: typeof import('./src/components/header/header.vue')['default']
     Hero_section: typeof import('./src/components/header/hero_section.vue')['default']
+    Mobile_header: typeof import('./src/components/header/mobile_header.vue')['default']
+    Order_dialog: typeof import('./src/components/order_dialog.vue')['default']
     Partners: typeof import('./src/components/partners.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

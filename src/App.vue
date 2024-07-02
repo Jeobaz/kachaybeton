@@ -2,13 +2,27 @@
   <v-app>
     <Header />
     <v-main>
-      <HeroSection fill-height :callPhone="call" :typeEmail="email" />
-      <ServicesGallery />
+      <HeroSection @show-dialog="showDialog" />
+      <ServicesGallery @show-dialog="showDialog" />
       <Gallery />
       <Partners />
-      <Contacts />
+      <Contacts @show-dialog="showDialog" />
     </v-main>
   </v-app>
+  <v-dialog v-model="dialog" max-width="500px">
+    <v-card class="d-flex">
+      <v-card-title>Выберите опцию заказа</v-card-title>
+      <v-card-text class="justify-center">
+        <v-btn block color="amber" @click="call" class="mb-6"
+          >Звонок 70-90-90</v-btn
+        >
+        <v-btn block color="amber" @click="email">Почта 709090@inbox.ru</v-btn>
+      </v-card-text>
+      <v-card-actions>
+        <v-btn @click="dialog = false">Отмена</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
 </template>
 
 <script>
@@ -18,6 +32,8 @@ import ServicesGallery from "./components/equipment/services_gallery.vue";
 import Gallery from "./components/gallery/gallery.vue";
 import Partners from "./components/partners.vue";
 import Contacts from "./components/contacts.vue";
+//
+// import OrderDialog from "./components/order_dialog.vue";
 
 export default {
   name: "App",
@@ -28,18 +44,24 @@ export default {
     Gallery,
     Partners,
     Contacts,
+    // OrderDialog,
+  },
+  data() {
+    return {
+      dialog: false,
+    };
   },
   methods: {
-    methods: {
-      dialog() {
-        this.dialog = true;
-      },
-      call() {
-        window.open("tel:+79999999999");
-      },
-      email() {
-        window.open("mailto:test@test.ru");
-      },
+    showDialog() {
+      this.dialog = true;
+    },
+    call() {
+      window.open("tel:+73452709090");
+      this.dialog = false;
+    },
+    email() {
+      window.open("mailto:709090@inbox.ru");
+      this.dialog = false;
     },
   },
 };

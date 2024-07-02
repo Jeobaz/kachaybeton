@@ -1,22 +1,26 @@
 <template>
-  <p class="text-center text-h3 font-weight-black mb-12" id="services">
-    Товарный бетон
-  </p>
-  <v-container fill-height id="service">
-    <TableCard />
-    <p class="text-center text-h3 font-weight-black mb-12">Наша техника</p>
-    <v-row>
-      <v-col cols="12">
-        <v-row>
-          <EquipmentCards
-            v-for="equipment in equipmentList"
-            :key="equipment.id"
-            :equipment="equipment"
-          />
-        </v-row>
-      </v-col>
-    </v-row>
-  </v-container>
+  <v-container class="mt-12">
+    <v-container style="height: 100vh" class="mb-12">
+      <p class="text-center text-h3 font-weight-black" id="services">
+        Товарный бетон
+      </p>
+      <TableCard @show-dialog="$emit('show-dialog')" />
+    </v-container>
+    <v-container fill-height id="service">
+      <p class="text-center text-h3 font-weight-black mb-12">Наша техника</p>
+      <v-row>
+        <v-col cols="12">
+          <v-row class="d-flex flex-row align-stretch">
+            <EquipmentCards
+              v-for="equipment in equipmentList"
+              :key="equipment.id"
+              :equipment="equipment"
+              @show-dialog="$emit('show-dialog')"
+            />
+          </v-row>
+        </v-col>
+      </v-row> </v-container
+  ></v-container>
 </template>
 
 <script>
@@ -39,7 +43,8 @@ export default {
         {
           id: 1,
           title: "Автобетоносмеситель",
-          price: "350",
+          price: "600",
+          useBasePriceCaption: true,
           priceFrom: true,
           description1: "В наличии 8 единиц техники",
           description2: "Доступные объемы от 9 до 16м³",
@@ -50,40 +55,25 @@ export default {
         {
           id: 2,
           title: "Автобетононасос",
-          price: "300",
+          price: "500",
+          useBasePriceCaption: true,
           priceFrom: false,
           description1: "Высота подачи 47 и 57м",
           description2: "Размер площадки 7 х 9м",
-          caption: "Минимальный объем 50 м³ / 15 000₽",
+          caption: "Минимальный объем 50 м³ / 18 000₽",
           path: "/cards/pump.png",
         },
         {
-          id: 3,
-          title: "Автобетононасос с бетоносмесителем",
-          price: "300",
-          priceFrom: true,
+          id: 4,
+          title: "Автобетононасос \n с бетоносмесителем",
+          price: "20 000",
+          priceCaption: "/ рейс",
+          useBasePriceCaption: false,
+          priceFrom: false,
           description1: "Высота подачи до 25м",
           description2: "Размер площадки 4 х 5м",
-          caption: "Минимальный объем 40 м³ / 12 000₽",
-          path: "/cards/mixer.png",
-        },
-        {
-          id: 4,
-          title: "Автобетононасос с бетоносмесителем",
-          price: "300",
-          priceFrom: false,
-          description1: "Высота подачи 47 и 57м",
-          description2: "Размер площадки 7 х 9м",
+          caption: "",
           path: "/cards/pump_with_mixer.png",
-        },
-        {
-          id: 5,
-          title: "Насос стационарный",
-          price: "350",
-          priceFrom: true,
-          description1: "Высота подачи 47 и 57м",
-          description2: "Размер площадки 7 х 9м",
-          path: "/cards/pump_static.png",
         },
       ],
     };

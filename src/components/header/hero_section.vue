@@ -1,7 +1,17 @@
-<template>
-  <v-container class="bg" fluid>
-    <v-row class="d-flex">
-      <v-col cols="12" md="6" class="center ml-sm-0 mt-md-12 ml-0">
+<template fill-height>
+  <v-container class="bg px-0" fluid>
+    <v-row class="d-flex align-center" style="height: 100vh">
+      <v-col cols="12" md="6" class="ml-sm-0 ml-0">
+        <MobileHeader v-if="$vuetify.display.smAndDown" />
+        <v-col
+          cols="12"
+          class="ml-sm-0 ml-md-12 mb-6"
+          v-if="$vuetify.display.mdAndUp"
+        >
+          <p class="text-md-h3 font-weight-black text-h5">
+            Компания «КачайБетон»
+          </p>
+        </v-col>
         <v-col cols="12" class="ml-sm-0 ml-md-12 mb-6">
           <p class="text-md-h4 font-weight-black text-h6">
             Продажа бетона любой марки
@@ -26,66 +36,24 @@
           cols="12"
           class="d-flex ml-sm-0 ml-md-12 justify-center justify-md-start"
         >
-          <v-btn color="amber" @click="showOrderDialog" size="x-large"
+          <v-btn color="amber" @click="$emit('show-dialog')" size="x-large"
             >Заказать</v-btn
           >
         </v-col>
       </v-col>
 
-      <v-col cols="12" md="6" class="d-none d-md-flex">
-        <v-img src="/hero/hero.png" alt="Автобетононасос"></v-img>
+      <v-col cols="12" md="6" class="d-none d-md-flex pump pa-0">
+        <v-img src="/hero/hero.png" alt="Автобетононасос" cover></v-img>
       </v-col>
     </v-row>
-    <v-dialog v-model="dialog" max-width="500px">
-      <v-card class="d-flex">
-        <v-card-title>Выберите опцию заказа</v-card-title>
-        <v-card-text class="justify-center">
-          <v-btn block color="amber" @click="call" class="mb-6"
-            >Звонок +7 999 999 99 99</v-btn
-          >
-
-          <v-btn block color="amber" @click="email">Почта test@test.ru</v-btn>
-        </v-card-text>
-        <v-card-actions>
-          <v-btn @click="dialog = false">Отмена</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
   </v-container>
 </template>
   
   <script>
+import MobileHeader from "./mobile_header.vue";
 export default {
   name: "HeroSection",
-  data() {
-    return {
-      dialog: false,
-      selectedOption: "",
-    };
-  },
-  props: {
-    callPhone: {
-      type: Function,
-      required: true,
-    },
-    typeEmail: {
-      type: Function,
-      required: true,
-    },
-  },
-  methods: {
-    showOrderDialog() {
-      this.dialog = true;
-    },
-    call() {
-      window.open("tel:+79999999999");
-      this.dialog = false;
-    },
-    email() {
-      window.open("mailto:test@test.ru");
-      this.dialog = false;
-    },
-  },
+  components: { MobileHeader },
 };
 </script>
   
@@ -94,5 +62,9 @@ export default {
 .bg {
   background: url("/hero/bg.png");
   background-size: cover;
+  height: 100vh;
+}
+.pump {
+  height: 100vh;
 }
 </style>

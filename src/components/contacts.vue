@@ -6,7 +6,7 @@
   >
     <p class="text-center text-h3 font-weight-black mb-12">Наши контакты</p>
     <p class="text-h4 mb-10">
-      <strong>Тюмень, Ветеранов Труда 48</strong>
+      <strong>Тюмень, 50 лет Октября, 222 к3</strong>
     </p>
     <p class="text-h4 mb-10">
       <strong>8 3452 70 90 90 / 8 3452 700 999</strong>
@@ -23,6 +23,13 @@
         >@kachay_beton</a
       >
     </p>
+    <v-btn
+      color="amber"
+      @click="$emit('show-dialog')"
+      size="x-large"
+      class="px-12"
+      >Заказать</v-btn
+    >
   </v-container>
 </template>
   

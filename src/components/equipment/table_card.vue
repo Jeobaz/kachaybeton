@@ -21,7 +21,13 @@
           </v-card-text>
           <v-divider></v-divider>
           <v-card-actions>
-            <v-btn color="amber darken-2" block variant="tonal">Заказать</v-btn>
+            <v-btn
+              color="amber darke2-3"
+              block
+              varitant="tonal"
+              @click="$emit('show-dialog')"
+              >Заказать</v-btn
+            >
           </v-card-actions>
         </v-card>
       </v-col>
@@ -55,37 +61,40 @@
   <script>
 export default {
   name: "TableCard",
-
   data() {
     return {
       concrete: [
         {
-          name: "B 5 (М-50)",
-          price: "3 100 ₽",
+          name: "B 3,5 (М-50)",
+          price: "5 600 ₽",
         },
         {
           name: "B 7,5 (М-100)",
-          price: "3 100 ₽",
+          price: "5 650 ₽",
         },
         {
           name: "B 10 (М-150)",
-          price: "3 100 ₽",
+          price: "5 850 ₽",
         },
         {
           name: "B 15 (М-200)",
-          price: "3 100 ₽",
+          price: "6 500 ₽",
+        },
+        {
+          name: "B 20 (М-250)",
+          price: "6 950 ₽",
         },
         {
           name: "B 22,5 (М-300)",
-          price: "3 100 ₽",
+          price: "7 350 ₽",
         },
         {
           name: "B 25 (М-350)",
-          price: "3 100 ₽",
+          price: "7 850 ₽",
         },
         {
           name: "B 30 (М-400)",
-          price: "3 100 ₽",
+          price: "8 400 ₽",
         },
       ],
     };
