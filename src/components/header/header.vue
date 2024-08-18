@@ -14,7 +14,6 @@
         max-height="40"
         max-width="200"
       ></v-img>
-      <p class="text-h6 black--text">КачайБетон</p>
     </v-row>
 
     <template v-if="$vuetify.display.mdAndUp">
